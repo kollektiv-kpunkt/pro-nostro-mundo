@@ -1,0 +1,15 @@
+{
+    "name": "kollektiv-kpunkt/pro-nostro-mundo",
+    "description": "Wordpress Theme for the \"SNB coalition\" (unsere-snb.ch).",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "authors": [
+        {
+            "name": "Timothy from K",
+            "email": "timothy@kpunkt.ch"
+        }
+    ]
+}

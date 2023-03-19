@@ -6,7 +6,8 @@ webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
-additional_hostnames: []
+additional_hostnames:
+    - fr.pn72
 additional_fqdns: []
 database:
     type: mariadb
@@ -17,6 +18,11 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 nodejs_version: "16"
+web_extra_exposed_ports:
+  - name: ViteJS
+    container_port: 5173
+    http_port: 5172
+    https_port: 5173
 
 # Key features of ddev's config.yaml:
 
