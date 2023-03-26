@@ -67,7 +67,23 @@ function pnm_theme_support() {
     register_nav_menus( array(
         'primary_menu' => __( 'Primary Menu', 'pnm' ),
         'footer_menu'  => __( 'Footer Menu', 'pnm' ),
+        "some_menu" => __("Social Media Menu", "pnm")
     ) );
 }
 
 add_action( 'after_setup_theme', 'pnm_theme_support' );
+
+function get_nav_menu_items_by_location( $location, $args = [] ) {
+
+    // Get all locations
+    $locations = get_nav_menu_locations();
+
+    // Get object id by location
+    $object = wp_get_nav_menu_object( $locations[$location] );
+
+    // Get menu items by menu name
+    $menu_items = wp_get_nav_menu_items( $object->name, $args );
+
+    // Return menu post objects
+    return $menu_items;
+}
