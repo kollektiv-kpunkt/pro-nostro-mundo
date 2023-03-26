@@ -1,0 +1,5 @@
+@import "./fonts/fonts.scss";
+
+html {
+    font-size: clamp(18px, 1.157407vw, 24px);
+}
