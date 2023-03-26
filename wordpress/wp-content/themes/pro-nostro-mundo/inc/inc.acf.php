@@ -26,10 +26,6 @@ function pnm_acf() {
 
     if ($_ENV["APP_ENV"] === "production") {
         add_filter('acf/settings/show_admin', '__return_false');
-        // add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
-        // function my_acf_settings_show_admin( $show_admin ) {
-        //     return false;
-        // }
     }
 }
 
