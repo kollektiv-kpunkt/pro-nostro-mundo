@@ -1,0 +1,22 @@
+{
+    "name": "pnm/fp-heroine",
+    "title": "Frontpage Heroine",
+    "description": "Heroine on Frontpage",
+    "category": "pnm-blocks",
+    "icon": "align-full-width",
+    "keywords": [
+        "heroine",
+        "frontpage",
+        "pnm",
+        "unsere SNB",
+        "notre BNS"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "layout.php",
+        "postTypes": [
+            "page"
+        ]
+    },
+    "align": "full"
+}
