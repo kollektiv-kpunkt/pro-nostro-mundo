@@ -1,0 +1,76 @@
+.pnm-fp-heroine {
+
+    .fp-heroine-slide-img {
+        --indent-height: 2.5rem;
+        --indent-width: calc(100% / 5);
+
+        img {
+            clip-path: polygon(0 var(--indent-height), var(--indent-width) var(--indent-height), var(--indent-width) 0, 100% 0, 100% calc(100% - var(--indent-height)), calc(100% - var(--indent-width)) calc(100% - var(--indent-height)), calc(100% - var(--indent-width)) 100%, 0 100%);
+            max-height: calc(100vh - 10rem);
+            width: auto;
+
+            &:hover {
+                cursor: pointer;
+                object-fit: 125%;
+            }
+
+            @apply mx-auto;
+
+            @media (max-width: 1023px) {
+                aspect-ratio: 16/10;
+            }
+
+            @media (max-width: 639px) {
+                aspect-ratio: 4/3;
+                clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--indent-height)), calc(100% - var(--indent-width)) calc(100% - var(--indent-height)), calc(100% - var(--indent-width)) 100%, 0 100%);
+            }
+        }
+
+        @media (max-width: 639px) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+
+            --indent-height: 5rem;
+        }
+    }
+
+    .fp-heroine-slide-pagination {
+        @media (max-width: 767px) {
+            bottom: unset;
+            right: unset;
+            left: 1.5rem;
+            top: 0;
+        }
+
+        @media (max-width: 639px) {
+            left: 0;
+            top: -0.5rem;
+        }
+    }
+
+    .fp-heroine-slide-content {
+        width: stretch;
+        transition: 0.5s ease max-height;
+
+        @media (max-width: 1023px) {
+            position: relative;
+            margin-left: 0 !important;
+            margin-top: -10rem;
+            @apply pb-0
+        }
+
+        @media (max-width: 767px) {
+            margin-top: -4rem;
+            max-width: 80% !important;
+        }
+
+        @media (max-width: 639px) {
+            margin-top: -4rem;
+            position: relative;
+            width: 90% !important;
+            max-width: 400px !important;
+            margin-left: auto !important;
+            margin-right: 0 !important;
+        }
+    }
+}

@@ -9,7 +9,7 @@
     font-family: IcoFont;
     font-weight: 400;
     font-style: Regular;
-    src: url("/wp-content/themes/pro-nostro-mundo/src/css/typography/fonts/icofont.woff2") format("woff2"), url("/wp-content/themes/pro-nostro-mundo/src/css/typography/fonts/icofont.woff") format("woff")
+    src: url("@fonts/icofont.woff2") format("woff2"), url("@fonts/icofont.woff") format("woff")
 }
 
 [class*=" icofont-"],

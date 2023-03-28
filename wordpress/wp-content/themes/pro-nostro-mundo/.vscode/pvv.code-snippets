@@ -8,88 +8,54 @@
         ],
         "description": "Get a template part from the theme."
     },
-    "Mobile Styles large (1080px)": {
-        "prefix": [
-            "ms-large"
-        ],
+    // => @media (min-width: 640px) { ... }
+    // => @media (min-width: 768px) { ... }
+    // => @media (min-width: 1024px) { ... }
+    // => @media (min-width: 1280px) { ... }
+    // => @media (min-width: 1536px) { ... }
+    "Mobile Style SM (639px)": {
+        "prefix": "ms-sm",
         "body": [
-            "@media (max-width: 1080px) {",
-            "    ${1:style}",
-            "}",
+            "@media (max-width: 639px) {",
+            "\t$1",
+            "}"
         ],
-        "description": "Add mobile styles large."
+        "description": "Mobile Style 639px"
     },
-    "Mobile Styles medium (980px)": {
-        "prefix": [
-            "ms-medium"
-        ],
+    "Mobile Style MD (767px)": {
+        "prefix": "ms-md",
         "body": [
-            "@media (max-width: 980px) {",
-            "    ${1:style}",
-            "}",
+            "@media (max-width: 767px) {",
+            "\t$1",
+            "}"
         ],
-        "description": "Add mobile styles medium."
+        "description": "Mobile Style 767px"
     },
-    "Mobile Styles small (780px)": {
-        "prefix": [
-            "ms-small"
-        ],
+    "Mobile Style LG (1023px)": {
+        "prefix": "ms-lg",
         "body": [
-            "@media (max-width: 780px) {",
-            "    ${1:style}",
-            "}",
+            "@media (max-width: 1023px) {",
+            "\t$1",
+            "}"
         ],
-        "description": "Add mobile styles small."
+        "description": "Mobile Style 1023px"
     },
-    "Mobile Styles x-small (480px)": {
-        "prefix": [
-            "ms-x-small"
-        ],
+    "Mobile Style XL (1279px)": {
+        "prefix": "ms-xl",
         "body": [
-            "@media (max-width: 480px) {",
-            "    ${1:style}",
-            "}",
+            "@media (max-width: 1279px) {",
+            "\t$1",
+            "}"
         ],
-        "description": "Add mobile styles x-small."
+        "description": "Mobile Style 1279px"
     },
-    "Mobile Styles tiny (360px)": {
-        "prefix": [
-            "ms-tiny"
-        ],
+    "Mobile Style 2XL (1535px)": {
+        "prefix": "ms-2xl",
         "body": [
-            "@media (max-width: 360px) {",
-            "    ${1:style}",
-            "}",
+            "@media (max-width: 1535px) {",
+            "\t$1",
+            "}"
         ],
-        "description": "Add mobile styles tiny."
+        "description": "Mobile Style 1535px"
     },
-    "Mobile Styles special": {
-        "prefix": [
-            "ms-special"
-        ],
-        "body": [
-            "@media (max-width: ${1:width}px) {",
-            "    ${1:style}",
-            "}",
-        ],
-        "description": "Add mobile styles special."
-    },
-    "Register block": {
-        "prefix": [
-            "reg-block"
-        ],
-        "body": [
-            "acf_register_block_type(array(",
-            "    'name'              => '${1:name}',",
-            "    'title'             => __('${2:beautifulname}'),",
-            "    'description'       => __('${3:description}'),",
-            "    'render_template'   => 'template-parts/blocks/${1:name}.php',",
-            "    'category'          => 'pknetz',",
-            "    'icon'              => '',",
-            "    'keywords'          => array(${4:keywords}),",
-            "    'supports'          => array('anchor' => true, 'align' => array('wide', 'full')",
-            "));",
-        ],
-        "description": "Register new block."
-    }
 }

@@ -84,6 +84,10 @@ module.exports = {
                     "10": "#FDF2EE",
                     "slight": "#FEF9F7"
                 }
+            },
+            aspectRatio: {
+                "16/9": "16/9",
+                "4/3": "4/3",
             }
         }
     },

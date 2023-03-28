@@ -1,0 +1,36 @@
+.pnm-navbar {
+
+    .pnm-navbar-main-menu {
+        li {
+            list-style: none;
+
+            a {
+                @apply px-2 border-b-2 border-b-pnm-foreground-70 pb-1
+            }
+
+            &.menu-item-has-children a:after {
+                content: "\ea99";
+                font-family: "IcoFont";
+                margin-left: 0.5em;
+                @apply text-pnm-accent
+            }
+
+            .sub-menu {
+                position: absolute;
+                flex-direction: row;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
+
+    .pnm-fries-menu {
+        row-gap: 0.25rem;
+
+        .pnm-fries-menu-line {
+            width: 2rem;
+            height: 0.15rem;
+            @apply bg-pnm-accent
+        }
+    }
+}

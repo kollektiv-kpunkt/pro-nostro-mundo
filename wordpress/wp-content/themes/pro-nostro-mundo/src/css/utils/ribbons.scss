@@ -1,0 +1,9 @@
+[class*="pnm-ribbon"] {
+    --ribbon-color: theme("colors.pnm-accent.DEFAULT");
+    box-shadow: 0 0 0 100vmax var(--ribbon-color);
+    clip-path: inset(0 -100vmax);
+
+    &.pnm-ribbon-secondary {
+        --ribbon-color: theme("colors.pnm-secondary.DEFAULT");
+    }
+}

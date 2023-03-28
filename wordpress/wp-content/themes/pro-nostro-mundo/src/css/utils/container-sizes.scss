@@ -1,4 +1,4 @@
-#main-content>*:not(.alignwide):not(.alignfull) {
+#body-content>*:not(.alignwide):not(.alignfull) {
     --maxwidth: 890px;
     max-width: calc(var(--maxwidth) + var(--container-padding) * 2);
     --container-padding: 2rem;
@@ -7,25 +7,25 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }
 
-#main-content *.alignwide {
-    max-width: calc(1408px + var(--container-padding) * 2);
+#body-content *.alignwide {
+    max-width: calc(1385px + var(--container-padding) * 2);
     --container-padding: 2rem;
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }
 
-#main-content *.alignfull {
+#body-content *.alignfull {
     max-width: calc(1920px + var(--container-padding) * 2);
     --container-padding: 2rem;
     padding-left: var(--container-padding);
@@ -33,7 +33,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }
@@ -46,20 +46,20 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }
 
 .wp-block-group__inner-container>.alignwide {
-    max-width: calc(1408px + var(--container-padding) * 2);
+    max-width: calc(1385px + var(--container-padding) * 2);
     --container-padding: 2rem;
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }
@@ -72,7 +72,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }
@@ -86,21 +86,21 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }
 
 .wp-block-group.is-layout-flex>.alignwide {
     width: 100%;
-    max-width: calc(1408px + var(--container-padding) * 2);
+    max-width: calc(1385px + var(--container-padding) * 2);
     --container-padding: 2rem;
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }
@@ -114,9 +114,14 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
+}
+
+.alignfull .alignwide,
+.alignfull .alignfull {
+    --container-padding: 0px !important;
 }
 
 .wp-block-group.is-layout-flex:has(.wp-block-group.is-layout-flex)>*,
@@ -126,7 +131,7 @@
 }
 
 .single {
-    #main-content>*:not(.alignwide):not(.alignfull) {
+    #body-content>*:not(.alignwide):not(.alignfull) {
         max-width: calc(680px + var(--container-padding) * 2);
         --container-padding: 2rem;
         padding-left: var(--container-padding);
@@ -139,7 +144,7 @@
         }
     }
 
-    #main-content>*.alignwide {
+    #body-content>*.alignwide {
         max-width: calc(952px + var(--container-padding) * 2);
         --container-padding: 2rem;
         padding-left: var(--container-padding);
@@ -164,14 +169,14 @@
     margin-right: auto;
 
     &.alignwide {
-        --maxwidth: 1408px;
+        --maxwidth: 1385px;
     }
 
     &.alignfull {
         --maxwidth: 1920px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 980px) {
         --container-padding: 1rem;
     }
 }

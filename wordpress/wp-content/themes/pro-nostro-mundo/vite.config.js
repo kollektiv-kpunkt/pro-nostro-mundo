@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import liveReload from 'vite-plugin-live-reload'
 const { resolve } = require('path')
+import { fileURLToPath, URL } from "url";
 
 // https://vitejs.dev/config
 export default defineConfig({
@@ -13,7 +14,7 @@ export default defineConfig({
     root: '',
     base: process.env.NODE_ENV === 'development'
         ? '/'
-        : '/dist/',
+        : '/wp-content/themes/pro-nostro-mundo/dist/',
 
     build: {
         // output dir for production build
@@ -49,8 +50,10 @@ export default defineConfig({
 
     resolve: {
         alias: {
-            "@fonts": 'wp-content/themes/pro-nostro-mundo/src/css/typoghraphy/fonts',
-        }
+            '@fonts': process.env.NODE_ENV === 'development'
+                ? fileURLToPath(new URL('wp-content/themes/pro-nostro-mundo/src/css/typography/fonts', import.meta.url))
+                : fileURLToPath(new URL('./src/css/typography/fonts', import.meta.url))
+        },
     }
 })
 

@@ -3,6 +3,7 @@ function pnm_theme_support() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'align-wide' );
+    add_editor_style('gutenberg/fixes.css' );
     add_theme_support( "editor-color-palette", array(
         [
             "slug" => "pnm-accent",
@@ -49,17 +50,17 @@ function pnm_theme_support() {
         ),
         array(
             'name' => __('Medium', 'pnm'),
-            'size' => 24,
+            'size' => "1.3rem",
             'slug' => 'medium'
         ),
         array(
             'name' => __('Large', 'pnm'),
-            'size' => 30,
+            'size' => "2.25rem",
             'slug' => 'large'
         ),
         array(
             'name' => __('x-Large', 'pnm'),
-            'size' => 45,
+            'size' => "3rem",
             'slug' => 'x-large'
         )
     ));

@@ -1,0 +1,7 @@
+.pnm-hr-accent {
+    width: 8rem;
+    max-width: 100%;
+    border: none;
+    border-top: 5px solid;
+    @apply border-t-pnm-foreground;
+}
