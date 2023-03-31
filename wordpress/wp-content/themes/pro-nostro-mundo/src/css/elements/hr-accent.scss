@@ -3,5 +3,10 @@
     max-width: 100%;
     border: none;
     border-top: 5px solid;
+    margin: 0.75rem 0;
     @apply border-t-pnm-foreground;
+
+    &.heavy {
+        border-top-width: 10px;
+    }
 }

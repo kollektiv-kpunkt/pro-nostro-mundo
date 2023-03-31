@@ -17,7 +17,7 @@ class FPSlider {
         this.slides = JSON.parse(this.slider.querySelector("script[type='text/json']").innerText);
         this.slideLength = this.slides.length;
         this.imageMarkup = this.slider.querySelector(".fp-heroine-slide-img img");
-        this.imageMarkup.addEventListener("click", () => {
+        this.slider.addEventListener("click", () => {
             this.contentMarkup.querySelector("a").click();
         });
         this.contentMarkup = this.slider.querySelector(".fp-heroine-slide-content");

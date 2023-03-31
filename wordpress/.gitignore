@@ -11,12 +11,12 @@
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
 /wp-includes/
+/wp-content/backups-dup-lite/
 /index.php
 /license.txt
 /readme.html
 /wp-*.php
 /xmlrpc.php
-/wp-content/backups-dup-lite/
 
 # Configuration
 wp-config.php

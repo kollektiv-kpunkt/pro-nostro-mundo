@@ -8,3 +8,4 @@ $dotenv->safeLoad();
 include __DIR__ . '/inc/inc.vite.php';
 include __DIR__ . '/inc/inc.acf.php';
 include __DIR__ . '/inc/inc.themsupports.php';
+include __DIR__ . '/inc/inc.widgets.php';
