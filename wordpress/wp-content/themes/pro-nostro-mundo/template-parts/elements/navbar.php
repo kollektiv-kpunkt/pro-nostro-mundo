@@ -12,6 +12,7 @@
                     'theme_location' => 'primary_menu',
                     'container' => false,
                     'items_wrap' => '%3$s',
+                    "depth" => 2,
                 ) );
                 ?>
             </div>

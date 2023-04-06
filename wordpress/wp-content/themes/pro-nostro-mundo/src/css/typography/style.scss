@@ -121,3 +121,34 @@ h5+p,
 h6+p {
     margin-top: 0.5em;
 }
+
+
+// Body defaults
+
+#body-content {
+    a {
+        text-decoration: underline;
+
+        &.pnm-button,
+        &.wp-block-button__link {
+            text-decoration: none;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        a {
+            text-decoration: none;
+        }
+    }
+
+    ul {
+        list-style: disc;
+        margin-left: 1.5em;
+        @apply my-4;
+    }
+}

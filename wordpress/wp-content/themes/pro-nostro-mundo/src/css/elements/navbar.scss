@@ -8,7 +8,7 @@
                 @apply px-2 border-b-2 border-b-pnm-foreground-70 pb-1
             }
 
-            &.menu-item-has-children a:after {
+            &.menu-item-has-children>a:after {
                 content: "\ea99";
                 font-family: "IcoFont";
                 margin-left: 0.5em;
@@ -20,6 +20,12 @@
                 flex-direction: row;
                 visibility: hidden;
                 opacity: 0;
+            }
+
+            &.current-menu-ancestor {
+                >a {
+                    @apply font-bold border-b-pnm-accent;
+                }
             }
         }
     }

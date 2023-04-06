@@ -1,0 +1,47 @@
+@import "./loader.scss";
+
+.pnm-form {
+    --cols: 2;
+    --gap: 1rem;
+    --col-width: calc(100% / var(--cols) - var(--gap) * (var(--cols) - 1) / var(--cols));
+
+    @apply flex flex-wrap;
+
+    .pnm-form-group {
+        width: var(--col-width);
+        @apply flex;
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        textarea {
+            @apply w-full p-2 text-sm bg-white bg-opacity-25 border-b-2 border-b-pnm-secondary;
+
+            &::placeholder {
+                @apply text-white;
+            }
+
+            &:focus {
+                @apply bg-white bg-opacity-100 outline-none text-pnm-secondary;
+
+                &::placeholder {
+                    @apply text-pnm-secondary text-opacity-60;
+                }
+            }
+        }
+    }
+
+    .pnm-form-message {
+        @apply px-4 py-3 bg-pnm-secondary text-white text-sm mb-4 w-full font-bold hidden;
+    }
+}

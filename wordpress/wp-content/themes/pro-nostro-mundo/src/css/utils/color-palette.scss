@@ -11,7 +11,7 @@ $colors: (
 @each $name,
 $color in $colors {
     .has-#{$name}-color {
-        color: $color;
+        color: $color !important;
     }
 
     .has-#{$name}-background-color {

@@ -5,11 +5,11 @@ $initial = $slides[0];
 
 <div class="pnm-fp-heroine alignfull mt-10 sm:mt-5 relative">
     <div class="fp-heroine-inner">
-        <div class="fp-heroine-slide-img alignwide !px-6 relative" class="flex">
+        <div class="fp-heroine-slide-img alignwide !px-6 xl:!px-0 relative" class="flex">
             <div class="aspect-16/9 relative fp-heroine-slide-img-wrapper">
-                <img src="<?= wp_get_attachment_image_url($initial["slide_image"]["ID"], "large") ?>" srcset="<?= wp_get_attachment_image_srcset($initial["slide_image"]["ID"], "large") ?>" alt="<?= $initial["title"] ?>" class="object-cover absolute top-0 left-0 w-full h-full" loading="lazy">
+                <img src="<?= wp_get_attachment_image_url($initial["slide_image"]["ID"], "small") ?>" srcset="<?= wp_get_attachment_image_srcset($initial["slide_image"]["ID"], array("full", "large", "medium", "medium_large", "small")) ?>" alt="<?= $initial["title"] ?>" class="object-cover absolute top-0 left-0 w-full h-full" loading="lazy">
             </div>
-            <div class="fp-heroine-slide-pagination flex gap-1 absolute bottom-0 right-6">
+            <div class="fp-heroine-slide-pagination flex gap-1 absolute bottom-0 right-6 xl:right-0">
                 <?php for($i = 0; $i < count($slides); $i++): ?>
                     <div class="fp-heroine-slide-page w-6 h-1 <?= ($i == 0) ? "bg-pnm-accent" : "bg-pnm-foreground-80" ?>" id="fp-slide-<?=$i?>"></div>
                 <?php endfor ?>

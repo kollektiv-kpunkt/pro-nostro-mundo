@@ -1,1 +1,2 @@
 px-4 aspect-4/3 py-4 object-contain opacity-80 relative z-10
+!block

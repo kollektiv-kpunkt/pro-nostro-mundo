@@ -1,0 +1,47 @@
+.ppv-content-toggle {
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+    transition: 0.25s ease background-color;
+    margin-top: -2px;
+    @apply py-3;
+
+    summary {
+        .ppv-content-toggle-title {
+            max-width: 80%;
+            line-height: 1.35;
+            @apply font-bold;
+        }
+
+        list-style: none;
+        cursor: pointer;
+        color: black;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .ppv-content-toggle-icon {
+        height: fit-content;
+        transition: 0.25s ease transform;
+        @apply text-pnm-accent;
+    }
+
+    &[open] {
+        background-color: white;
+
+        .ppv-content-toggle-summary {
+            @apply text-pnm-accent;
+        }
+
+        .ppv-content-toggle-icon {
+            transform: rotate(-180deg);
+        }
+
+        .ppv-content-toggle-content {
+            color: black
+        }
+    }
+}
