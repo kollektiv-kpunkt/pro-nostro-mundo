@@ -73,7 +73,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "ppv\/content-toggle"
+                "value": "pnm\/content-toggle"
             }
         ]
     ],
@@ -86,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680764103
+    "modified": 1680856267
 }

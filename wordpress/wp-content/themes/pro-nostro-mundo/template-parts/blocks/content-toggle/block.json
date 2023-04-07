@@ -1,5 +1,5 @@
 {
-    "name": "ppv/content-toggle",
+    "name": "pnm/content-toggle",
     "title": "Content toggle",
     "description": "Toggle to display and hide content on the page",
     "category": "layout",
@@ -9,7 +9,7 @@
         "content",
         "show",
         "hide",
-        "ppv"
+        "pnm"
     ],
     "acf": {
         "mode": "preview",

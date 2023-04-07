@@ -40,7 +40,7 @@ html :where(.editor-styles-wrapper) h6 {
     font-size: 1.7rem;
 }
 
-.ppv-link-toggle-content p {
+.pnm-link-toggle-content p {
     margin-bottom: 0;
     margin-top: 0;
     line-height: 1 !important;

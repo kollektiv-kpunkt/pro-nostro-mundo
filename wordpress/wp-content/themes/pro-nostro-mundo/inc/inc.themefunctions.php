@@ -13,7 +13,7 @@ add_shortcode('pnm-element', 'pnm_element_shortcode');
  * Return Breadcrump for current page
  */
 
-function wpd_get_menu_item( $field, $object_id, $items ){
+function pnm_get_menu_item( $field, $object_id, $items ){
     foreach( $items as $item ){
         if( $item->$field == $object_id ) return $item;
     }
@@ -32,7 +32,7 @@ function the_breadcrumbs( $args = array() ){
         return;
     }
     // get the menu item for the current page
-    $item = wpd_get_menu_item( 'object_id', get_queried_object_id(), $items );
+    $item = pnm_get_menu_item( 'object_id', get_queried_object_id(), $items );
     if( false === $item ){
         return;
     }
@@ -40,7 +40,7 @@ function the_breadcrumbs( $args = array() ){
     $menu_item_objects = array( $item );
     // loop over menu items to get the menu item parents
     while( 0 != $item->menu_item_parent ){
-        $item = wpd_get_menu_item( 'ID', $item->menu_item_parent, $items );
+        $item = pnm_get_menu_item( 'ID', $item->menu_item_parent, $items );
         array_unshift( $menu_item_objects, $item );
     }
     // output crumbs
@@ -68,7 +68,36 @@ function the_breadcrumbs( $args = array() ){
     $crumbs = join( '<i class="icofont-rounded-right mx-1"></i>', $crumbs );
     $classes = join( ' ', array( $args['text-color'], $args['opacity'] ) );
     $container = <<<EOD
-    <div class="pnm-breadcrumbs pnm-container alignwide text-sm mt-12 {$classes}">%s</div>
+    <div class="pnm-breadcrumbs pnm-container alignwide text-sm mt-6 md:mt-12 {$classes}">%s</div>
     EOD;
     echo sprintf( $container, $crumbs );
+}
+
+/**
+ * Return Subitems of page in menu by location
+ *
+ * $args = array(
+ * 'menu' => 'primary_menu',
+ * 'parent' => get_queried_object()->ID
+ * );
+ */
+
+function get_nav_subitems_by_location($args = array())
+{
+    $args = wp_parse_args($args, array(
+        "menu" => "primary_menu",
+        "parent" => get_queried_object()->ID
+    ));
+    $items = get_nav_menu_items_by_location($args['menu']);
+    if (false === $items) {
+        return;
+    }
+    $parentID = pnm_get_menu_item( 'object_id', $args["parent"], $items )->ID;
+    $subitems = array();
+    foreach ($items as $item) {
+        if ($item->menu_item_parent == $parentID) {
+            $subitems[] = $item;
+        }
+    }
+    return $subitems;
 }

@@ -6,7 +6,7 @@
     </div>
     <div class="pnm-footer-bottombar-container pnm-container alignfull pb-4">
         <div class="pnm-footer-bottombar-menu flex justify-between flex-wrap sm:items-end gap-x-12 md:gap-x-16 lg:gap-x-20 gap-y-6">
-            <a class="w-28" href="/">
+            <a class="h-16" href="/">
                 <?php
                     get_template_part( "template-parts/elements/logo-" . pll_current_language() );
                 ?>

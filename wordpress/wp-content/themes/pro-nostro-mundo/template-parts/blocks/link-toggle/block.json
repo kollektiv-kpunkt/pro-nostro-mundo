@@ -1,5 +1,5 @@
 {
-    "name": "ppv/link-toggle",
+    "name": "pnm/link-toggle",
     "title": "Link Toggle",
     "description": "Link Toggle for beautiful links",
     "category": "layout",
@@ -7,7 +7,7 @@
     "keywords": [
         "link",
         "toggle",
-        "ppv"
+        "pnm"
     ],
     "acf": {
         "mode": "preview",

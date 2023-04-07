@@ -6,6 +6,7 @@
             "key": "field_633084219eda1",
             "label": "Title",
             "name": "title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -25,6 +26,7 @@
             "key": "field_633084359eda2",
             "label": "Link",
             "name": "link",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 1,
@@ -41,6 +43,7 @@
             "key": "field_6330843e9eda3",
             "label": "Type",
             "name": "type",
+            "aria-label": "",
             "type": "radio",
             "instructions": "",
             "required": 1,
@@ -65,6 +68,7 @@
             "key": "field_6330846b9eda4",
             "label": "New tab",
             "name": "new_tab",
+            "aria-label": "",
             "type": "checkbox",
             "instructions": "",
             "required": 0,
@@ -82,7 +86,8 @@
             "allow_custom": 0,
             "layout": "vertical",
             "toggle": 0,
-            "save_custom": 0
+            "save_custom": 0,
+            "custom_choice_button_text": "Neue Auswahlmöglichkeit hinzufügen"
         }
     ],
     "location": [
@@ -90,7 +95,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "ppv\/link-toggle"
+                "value": "pnm\/link-toggle"
             }
         ]
     ],
@@ -103,5 +108,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1676539675
+    "modified": 1680856266
 }

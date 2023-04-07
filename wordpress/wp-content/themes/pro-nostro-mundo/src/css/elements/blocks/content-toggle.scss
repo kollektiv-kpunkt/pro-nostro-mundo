@@ -1,14 +1,14 @@
-.ppv-content-toggle {
+.pnm-content-toggle {
     width: 100%;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-radius: 2px;
     transition: 0.25s ease background-color;
     margin-top: -2px;
-    @apply py-3;
+    @apply py-3 px-2;
 
     summary {
-        .ppv-content-toggle-title {
+        .pnm-content-toggle-title {
             max-width: 80%;
             line-height: 1.35;
             @apply font-bold;
@@ -23,24 +23,24 @@
         display: none;
     }
 
-    .ppv-content-toggle-icon {
+    .pnm-content-toggle-icon {
         height: fit-content;
         transition: 0.25s ease transform;
         @apply text-pnm-accent;
     }
 
     &[open] {
-        background-color: white;
+        @apply bg-pnm-accent-10;
 
-        .ppv-content-toggle-summary {
+        .pnm-content-toggle-summary {
             @apply text-pnm-accent;
         }
 
-        .ppv-content-toggle-icon {
+        .pnm-content-toggle-icon {
             transform: rotate(-180deg);
         }
 
-        .ppv-content-toggle-content {
+        .pnm-content-toggle-content {
             color: black
         }
     }

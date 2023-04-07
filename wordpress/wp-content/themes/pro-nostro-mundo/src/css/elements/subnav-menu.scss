@@ -1,0 +1,35 @@
+.pnm-subnav-container {
+
+    .pnm-subnav-menu {
+        --containerwidth: 1385px;
+        --padding-left: max(calc((100vw - var(--containerwidth)) / 2), 2rem);
+        padding-left: var(--padding-left);
+
+        max-width: calc(100vw - var(--padding-left) - 0.5rem);
+
+        @media (max-width: 980px) {
+            --padding-left: 1rem;
+        }
+
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .pnm-subnav-item {
+            white-space: nowrap;
+        }
+
+        @apply py-2 pr-4 w-fit flex gap-x-6 gap-y-1 flex-col md:flex-row;
+
+        @media (max-width: 767px) {
+            width: 100vw;
+            max-width: unset;
+
+            @apply mt-2
+        }
+    }
+
+    @apply mb-5 xl:mb-16 max-h-0 overflow-hidden md:max-h-none;
+}

@@ -1,20 +1,20 @@
-.ppv-link-toggle-wrapper {
+.pnm-link-toggle-wrapper {
     margin-top: 1.5rem;
 
     &+& {
         margin-top: -2px;
     }
 
-    .ppv-link-toggle-content {
+    .pnm-link-toggle-content {
         border-top: 2px solid #000000;
         border-bottom: 2px solid #000000;
 
-        .ppv-link-toggle-content a p {
+        .pnm-link-toggle-content a p {
             max-width: 80%;
         }
 
         &.text-white {
-            .ppv-block-content {
+            .pnm-block-content {
                 border-color: #ffffff;
             }
         }
