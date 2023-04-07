@@ -2,7 +2,7 @@
 
 <footer id="pnm-footer" class="text-white bg-pnm-accent">
     <div class="pnm-footer-widget-container pnm-container alignwide pt-12 pb-16">
-        <?php dynamic_sidebar("footer_widget"); ?>
+        <?php dynamic_sidebar("footer_widget_" . pll_current_language()); ?>
     </div>
     <div class="pnm-footer-bottombar-container pnm-container alignfull pb-4">
         <div class="pnm-footer-bottombar-menu flex justify-between flex-wrap sm:items-end gap-x-12 md:gap-x-16 lg:gap-x-20 gap-y-6">
