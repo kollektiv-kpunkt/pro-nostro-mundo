@@ -85,7 +85,7 @@ $args = wp_parse_args($args, array(
                             "hide_current" => 1
                         ));
                         foreach($languages as $lang) {
-                            echo "<a href='" . $lang["url"] . "' class='pnm-langs-switcher-link'><span>" . $lang["slug"] . "</span></a>";
+                            echo "<a href='" . $lang["url"] . "' class='pnm-mobile-langs-switcher-link'><span>" . $lang["slug"] . "</span></a>";
                         }
                     ?>
                 </div>
