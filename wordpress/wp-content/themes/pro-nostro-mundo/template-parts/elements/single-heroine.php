@@ -1,4 +1,4 @@
-<div class="single-page-heroine-container pt-24 pb-12 md:pt-28 bg-pnm-accent">
+<div class="single-page-heroine-container pt-24 <?= (has_post_thumbnail(  )) ? "pb-40" : "pb-12" ?> md:pt-28 bg-pnm-accent">
     <div class="single-header-content-container pnm-container alignnarrow mt-8 text-center text-white">
         <div class="single-header-content-details flex justify-center text-xs gap-x-4 px-4 border-b-4 border-b-pnm-foreground w-fit mx-auto pb-2 mb-4">
             <?php
@@ -15,3 +15,10 @@
         <h1 class="mt-0"><?= the_title() ?></h1>
     </div>
 </div>
+<?php if (has_post_thumbnail(  )) : ?>
+    <div class="single-header-thumbnail-container pnm-container alignsingle">
+        <div class="single-header-thumbnail">
+            <?= the_post_thumbnail("large", array("class" => "w-full h-auto")); ?>
+        </div>
+    </div>
+<?php endif; ?>
