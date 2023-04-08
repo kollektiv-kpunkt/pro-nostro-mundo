@@ -92,6 +92,10 @@ function get_nav_subitems_by_location($args = array())
     if (false === $items) {
         return;
     }
+    $parent = pnm_get_menu_item('object_id', $args["parent"], $items);
+    if (false === $parent) {
+        return;
+    }
     $parentID = pnm_get_menu_item( 'object_id', $args["parent"], $items )->ID;
     $subitems = array();
     foreach ($items as $item) {
