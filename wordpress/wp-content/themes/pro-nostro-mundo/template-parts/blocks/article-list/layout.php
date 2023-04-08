@@ -73,7 +73,11 @@ $query_args["paged"] = (get_query_var("paged")) ? get_query_var("paged") : 1;
 $query["s"] = $_GET["query"]["s"] ?? "";
 
 $the_query = new WP_Query( $query_args );
-$list_id = "pnm-article-list-" . explode("_", $block["id"])[1];
+if (isset($block)) {
+    $list_id = "pnm-article-list-" . explode("_", $block["id"])[1];
+} else {
+    $list_id = "pnm-article-list-" . base64_encode($wp->request);
+}
 ?>
 
 <div class="pnm-article-list-container pnm-container alignwide<?= (isset($block["className"])) ? " " . $block["className"] : "" ?>">
