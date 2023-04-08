@@ -1,0 +1,303 @@
+# Copyright (C) 2023 Timothy@K.
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pro nostro mundo 0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/pro-nostro-mundo\n"
+"POT-Creation-Date: 2023-04-08T21:03:07+00:00\n"
+"PO-Revision-Date: 2023-04-08 23:05+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_CH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Domain: pnm\n"
+
+#. Theme Name of the theme
+msgid "Pro nostro mundo"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://github.com/kollektiv-kpunkt/pro-nostro-mundo"
+msgstr ""
+
+#. Description of the theme
+msgid "Wordpress Theme for the \"SNB coalition\" (unsere-snb.ch)."
+msgstr "Wordpress Theme für die SNB Koalition (unsere-snb.ch)."
+
+#. Author of the theme
+msgid "Timothy@K."
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://kpunkt.ch"
+msgstr ""
+
+#: author.php:9
+msgid "Autor*in: "
+msgstr ""
+
+#: category.php:5
+msgid "Kategorie: "
+msgstr ""
+
+#: inc/inc.themesupports.php:11
+msgid "Accent Color"
+msgstr ""
+
+#: inc/inc.themesupports.php:16
+msgid "Accent Color half"
+msgstr ""
+
+#: inc/inc.themesupports.php:21
+msgid "Foreground Color"
+msgstr ""
+
+#: inc/inc.themesupports.php:26
+msgid "Foreground Color half"
+msgstr ""
+
+#: inc/inc.themesupports.php:31
+msgid "Secondary Color"
+msgstr ""
+
+#: inc/inc.themesupports.php:36
+msgid "Tertiary Color"
+msgstr ""
+
+#: inc/inc.themesupports.php:41
+msgid "White"
+msgstr ""
+
+#: inc/inc.themesupports.php:47
+msgid "Small"
+msgstr ""
+
+#: inc/inc.themesupports.php:52
+msgid "Medium"
+msgstr ""
+
+#: inc/inc.themesupports.php:57
+msgid "Large"
+msgstr ""
+
+#: inc/inc.themesupports.php:62
+msgid "x-Large"
+msgstr ""
+
+#: inc/inc.themesupports.php:69
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/inc.themesupports.php:70
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/inc.themesupports.php:71
+msgid "Social Media Menu"
+msgstr ""
+
+#: inc/inc.widgets.php:8
+msgid "Footer Widget"
+msgstr ""
+
+#: template-parts/blocks/article-list/layout.php:86
+msgid "Keine Artikel gefunden"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/card.php:18
+msgid "Von %s"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/search-bar.php:3
+msgid "Filtern"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/search-bar.php:8
+#: template-parts/blocks/article-list/views/partials/search-bar.php:9
+msgid "Suchbegriff"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/search-bar.php:12
+#: template-parts/blocks/article-list/views/partials/search-bar.php:14
+msgid "Stichwörter"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/search-bar.php:13
+msgid "Keine weiteren Stichwörter verfügbar"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/search-bar.php:21
+#: template-parts/blocks/article-list/views/partials/search-bar.php:23
+msgid "Kategorien"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/search-bar.php:22
+msgid "Keine weiteren Kategorien verfügbar"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/search-bar.php:30
+#: template-parts/blocks/article-list/views/partials/search-bar.php:32
+msgid "Autor*in"
+msgstr ""
+
+#: template-parts/blocks/article-list/views/partials/search-bar.php:31
+msgid "Kein*e Autor*in verfügbar"
+msgstr ""
+
+#: template-parts/blocks/fp-heroine/layout.php:25
+msgid "Weiterlesen"
+msgstr ""
+
+#: template-parts/elements/newsletter-single.php:3
+msgid "Danke, dass du dich für unseren Newsletter angemeldet hast!"
+msgstr ""
+
+#: template-parts/elements/newsletter-single.php:6
+msgid "E-Mail Adresse"
+msgstr ""
+
+#: template-parts/elements/newsletter-single.php:7
+msgid "E-Mail Addresse"
+msgstr ""
+
+#: template-parts/elements/sub-nav.php:18
+msgid "Mehr"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block title"
+msgid "Article List"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block description"
+msgid "View of articles selected with parameters like category, author etc."
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block keyword"
+msgid "article"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block keyword"
+msgid "list"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block keyword"
+msgid "category"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block keyword"
+msgid "author"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block keyword"
+msgid "tag"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block keyword"
+msgid "date"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+#: template-parts/blocks/content-toggle/block.json
+#: template-parts/blocks/fp-heroine/block.json
+#: template-parts/blocks/link-toggle/block.json
+msgctxt "block keyword"
+msgid "pnm"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block keyword"
+msgid "unsere snb"
+msgstr ""
+
+#: template-parts/blocks/article-list/block.json
+msgctxt "block keyword"
+msgid "notre bns"
+msgstr ""
+
+#: template-parts/blocks/content-toggle/block.json
+msgctxt "block title"
+msgid "Content toggle"
+msgstr ""
+
+#: template-parts/blocks/content-toggle/block.json
+msgctxt "block description"
+msgid "Toggle to display and hide content on the page"
+msgstr ""
+
+#: template-parts/blocks/content-toggle/block.json
+#: template-parts/blocks/link-toggle/block.json
+msgctxt "block keyword"
+msgid "toggle"
+msgstr ""
+
+#: template-parts/blocks/content-toggle/block.json
+msgctxt "block keyword"
+msgid "content"
+msgstr ""
+
+#: template-parts/blocks/content-toggle/block.json
+msgctxt "block keyword"
+msgid "show"
+msgstr ""
+
+#: template-parts/blocks/content-toggle/block.json
+msgctxt "block keyword"
+msgid "hide"
+msgstr ""
+
+#: template-parts/blocks/fp-heroine/block.json
+msgctxt "block title"
+msgid "Frontpage Heroine"
+msgstr ""
+
+#: template-parts/blocks/fp-heroine/block.json
+msgctxt "block description"
+msgid "Heroine on Frontpage"
+msgstr ""
+
+#: template-parts/blocks/fp-heroine/block.json
+msgctxt "block keyword"
+msgid "heroine"
+msgstr ""
+
+#: template-parts/blocks/fp-heroine/block.json
+msgctxt "block keyword"
+msgid "frontpage"
+msgstr ""
+
+#: template-parts/blocks/fp-heroine/block.json
+msgctxt "block keyword"
+msgid "unsere SNB"
+msgstr ""
+
+#: template-parts/blocks/fp-heroine/block.json
+msgctxt "block keyword"
+msgid "notre BNS"
+msgstr ""
+
+#: template-parts/blocks/link-toggle/block.json
+msgctxt "block title"
+msgid "Link Toggle"
+msgstr ""
+
+#: template-parts/blocks/link-toggle/block.json
+msgctxt "block description"
+msgid "Link Toggle for beautiful links"
+msgstr ""
+
+#: template-parts/blocks/link-toggle/block.json
+msgctxt "block keyword"
+msgid "link"
+msgstr ""

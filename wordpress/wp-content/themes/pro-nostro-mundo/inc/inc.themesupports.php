@@ -70,6 +70,13 @@ function pnm_theme_support() {
         'footer_menu'  => __( 'Footer Menu', 'pnm' ),
         "some_menu" => __("Social Media Menu", "pnm")
     ) );
+
+    $textdomain = load_theme_textdomain( 'pnm', get_template_directory() . '/languages' );
+    if (!$textdomain) {
+        add_action( 'admin_notices', function() {
+            echo '<div class="error"><p>' . __( 'Error loading textdomain for theme "pro-nostro-mundo"', 'pro-nostro-mundo' ) . '</p></div>';
+        });
+    }
 }
 
 add_action( 'after_setup_theme', 'pnm_theme_support' );
