@@ -82,14 +82,14 @@ $list_id = "pnm-article-list-" . explode("_", $block["id"])[1];
             <h2 class="text-center"><?= esc_html__( "Keine Artikel gefunden", "pnm" ) ?></h2>
         </div>
     <?php endif ?>
-    <?= ((get_field("search_bar") && in_array(1, get_field("search_bar"))) || $args['search_bar'] == true) ? get_template_part( "template-parts/blocks/article-list/search-bar") : ""; ?>
+    <?= ((get_field("search_bar") && in_array(1, get_field("search_bar"))) || $args['search_bar'] == true) ? get_template_part( "template-parts/blocks/article-list/views/partials/search-bar") : ""; ?>
     <div class="pnm-article-list-content pt-8 md:pt-12" id="<?= $list_id ?>">
         <?= get_template_part( "template-parts/blocks/article-list/views/{$args["view"]}", "", array(
             "query" => $the_query
         ));  ?>
     </div>
     <?php if ($the_query->max_num_pages > 1) : ?>
-        <?= get_template_part( "template-parts/blocks/article-list/pagination", "", array(
+        <?= get_template_part( "template-parts/blocks/article-list/views/partials/pagination", "", array(
             "query" => $the_query,
             "list_id" => $list_id
         )); ?>

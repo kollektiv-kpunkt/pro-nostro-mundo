@@ -1,1 +1,0 @@
-<span class="opacity-20">SEARCHBAR COMING SOON</span>

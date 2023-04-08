@@ -1,11 +1,28 @@
 @import "./loader.scss";
+@import "./choicesjs.scss";
 
 .pnm-form {
     --cols: 2;
     --gap: 1rem;
     --col-width: calc(100% / var(--cols) - var(--gap) * (var(--cols) - 1) / var(--cols));
 
+    --accentcolor: theme("colors.pnm-accent.DEFAULT");
+    --bgcolor: theme("colors.pnm-accent.10");
+    --bgFocuscolor: theme("colors.pnm-accent.20");
+    --placeholdercolor: var(--accentcolor);
+    --placeholderFocuscolor: var(--accentcolor);
+
+    &.pnm-newsletter-form {
+        --accentcolor: theme("colors.pnm-secondary.DEFAULT");
+        --bgcolor: theme("colors.pnm-accent.80");
+        --bgFocuscolor: white;
+        --placeholdercolor: white;
+        --placeholderFocuscolor: var(--accentcolor);
+    }
+
     @apply flex flex-wrap;
+
+    gap: var(--gap);
 
     .pnm-form-group {
         width: var(--col-width);
@@ -24,18 +41,24 @@
         input[type="month"],
         input[type="week"],
         input[type="time"],
-        textarea {
-            @apply w-full p-2 text-sm bg-white bg-opacity-25 border-b-2 border-b-pnm-secondary;
+        textarea,
+        select {
+            border-bottom-color: var(--accentcolor);
+            background-color: var(--bgcolor);
+            color: var(--accentcolor);
+
+            @apply w-full p-2 text-sm border-b-2;
 
             &::placeholder {
-                @apply text-white;
+                color: var(--placeholdercolor);
             }
 
             &:focus {
-                @apply bg-white bg-opacity-100 outline-none text-pnm-secondary;
+                background-color: var(--bgFocuscolor);
+                @apply bg-opacity-100 outline-none;
 
                 &::placeholder {
-                    @apply text-pnm-secondary text-opacity-60;
+                    color: var(--placeholderFocuscolor);
                 }
             }
         }

@@ -32,5 +32,8 @@
     "bugs": {
         "url": "https://github.com/kollektiv-kpunkt/pro-nostro-mundo/issues"
     },
-    "homepage": "https://github.com/kollektiv-kpunkt/pro-nostro-mundo#readme"
+    "homepage": "https://github.com/kollektiv-kpunkt/pro-nostro-mundo#readme",
+    "dependencies": {
+        "choices.js": "^10.2.0"
+    }
 }

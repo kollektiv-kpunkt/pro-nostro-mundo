@@ -8,9 +8,21 @@
     --active-bg-color: theme('colors.pnm-secondary.80');
     --active-text-color: theme('colors.white');
 
+    &.color-accent {
+        --bg-color: theme('colors.pnm-accent.DEFAULT');
+        --text-color: theme('colors.white');
+        --hover-bg-color: theme('colors.pnm-accent.80');
+        --hover-text-color: theme('colors.white');
+        --focus-bg-color: theme('colors.pnm-accent.80');
+        --focus-text-color: theme('colors.white');
+        --active-bg-color: theme('colors.pnm-accent.80');
+        --active-text-color: theme('colors.white');
+    }
+
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,
+    color 0.15s ease-in-out;
     @apply px-10 py-4 inline-block font-bold text-white leading-none;
 
     &:hover {

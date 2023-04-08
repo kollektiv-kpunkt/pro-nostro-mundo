@@ -11,7 +11,9 @@ get_header();
     <?php if (get_nav_subitems_by_location()) : ?>
         <?= get_template_part( "template-parts/elements/sub-nav", null, array("menu" => "primary_menu", "parent" => get_queried_object()->ID) ); ?>
     <?php endif; ?>
-    <?php get_template_part( "template-parts/elements/social-share"); ?>
+    <?php if (in_array("1", get_field("social_share"))) : ?>
+        <?= get_template_part( "template-parts/elements/social-share"); ?>
+    <?php endif; ?>
     <?php the_content(); ?>
 </div>
 

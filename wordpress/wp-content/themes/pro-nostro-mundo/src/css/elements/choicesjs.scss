@@ -1,0 +1,63 @@
+.pnm-form-group {
+    div.choices {
+        width: 100%;
+
+        .choices__inner {
+            border: none;
+            border-bottom: 2px solid var(--accentcolor);
+            border-bottom-color: var(--accentcolor);
+            background-color: var(--bgcolor);
+            color: var(--accentcolor);
+            border-radius: 0;
+            @apply p-2 flex items-center;
+
+            .choices__list {
+                display: flex;
+                gap: 0.25rem;
+
+                &:has(.choices__item) {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        &[data-type="select-multiple"] {
+            .choices__inner {
+                .choices__item {
+                    margin: 0;
+                    border-radius: 5px;
+                    background-color: var(--accentcolor);
+                    border: 1px solid theme("colors.pnm-accent.140");
+                }
+            }
+        }
+
+        &[data-type="select-one"] {
+            .choices__inner {
+                .choices__list {
+                    padding: 0;
+
+                    .choices__item {
+                        margin: 0;
+                        opacity: 1;
+                        @apply text-sm
+                    }
+                }
+            }
+
+            &::after {
+                border-color: theme("colors.pnm-accent.DEFAULT") transparent transparent;
+            }
+
+            &.is-open::after {
+                margin-top: -2.5px;
+            }
+        }
+
+        input {
+            background-color: transparent !important;
+            padding: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}
