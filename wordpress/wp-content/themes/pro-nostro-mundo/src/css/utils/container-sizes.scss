@@ -1,11 +1,12 @@
-$templates : ("home #body-content" : (890px, 1385px, 1920px),
-    "page:not(.home) #body-content" : (890px, 1057px, 1385px),
-    "single #post-content" : (680px, 680px, 680px),
+$templates : (".home #body-content" : (890px, 1385px, 1920px),
+    ".page:not(.home) #body-content" : (890px, 1057px, 1385px),
+    ".archive:not(.home) #body-content" : (890px, 1057px, 1385px),
+    ".single #post-content" : (680px, 680px, 680px),
 );
 
 @each $template,
 $containersizes in $templates {
-    body.#{$template} {
+    body#{$template} {
         >*:not(.alignwide):not(.alignfull) {
             --maxwidth: #{nth($containersizes, 1)};
             max-width: calc(var(--maxwidth) + var(--container-padding) * 2);

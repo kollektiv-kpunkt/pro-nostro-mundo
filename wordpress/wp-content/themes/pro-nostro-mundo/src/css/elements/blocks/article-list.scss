@@ -1,0 +1,68 @@
+// Article List as cards
+
+.pnm-article-cards {
+    --columns: 3;
+
+    @media (max-width: 1023px) {
+        --columns: 2;
+    }
+
+    @media (max-width: 767px) {
+        --columns: 1;
+    }
+
+    .pnm-article-card {
+        width: calc(100% / var(--columns));
+        min-height: 33vw;
+        outline-offset: -1px;
+        border: var(--border);
+
+        --border: 1px solid theme("colors.pnm-foreground.50");
+
+        border-right: 0px;
+
+        @media (min-width: 1024px) {
+            &:nth-child(3n + 3) {
+                border-right: var(--border);
+            }
+
+            &:nth-child(n + 4) {
+                border-top: 0px;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            &:nth-child(2n + 2) {
+                border-right: var(--border);
+            }
+
+            &:nth-child(n + 3) {
+                border-top: 0px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            border-right: var(--border);
+
+            &:nth-child(n + 2) {
+                border-top: 0px;
+            }
+        }
+
+        &:last-child {
+            border-right: var(--border);
+        }
+
+        @apply p-4;
+
+        a.pnm-card-readmore i {
+            transition: 0.1s ease-in-out transform;
+        }
+
+        &:hover {
+            a.pnm-card-readmore i {
+                transform: translateX(0.25rem);
+            }
+        }
+    }
+}

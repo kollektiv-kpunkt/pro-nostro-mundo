@@ -1,0 +1,22 @@
+{
+    "name": "pnm/article-list",
+    "title": "Article List",
+    "description": "View of articles selected with parameters like category, author etc.",
+    "category": "layout",
+    "icon": "columns",
+    "keywords": [
+        "article",
+        "list",
+        "category",
+        "author",
+        "tag",
+        "date",
+        "pnm",
+        "unsere snb",
+        "notre bns"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "layout.php"
+    }
+}

@@ -6,3 +6,6 @@ import "./elements/mobile-navbar.js";
 import "./elements/scrollbar.js";
 import "./elements/lang-switcher.js";
 import "./elements/subnav.js";
+
+import "./elements/article-pagination.js";
+import "./elements/article-cards.js";

@@ -156,3 +156,8 @@ h6+p {
 #post-content :nth-child(1) {
     margin-top: 0 !important;
 }
+
+::selection {
+    color: theme("colors.pnm-accent.DEFAULT");
+    background-color: theme("colors.pnm-accent.20");
+}

@@ -5,3 +5,7 @@
 @import "./utils/style.scss";
 @import "./typography/style.scss";
 @import "./elements/style.scss";
+
+html {
+    scroll-behavior: smooth;
+}
