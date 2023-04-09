@@ -13,7 +13,7 @@ if (!isset($args)) {
 
 $params = array(
     "post_type" => "post",
-    "posts_per_page" => 10,
+    "posts_per_page" => 6,
     "orderby" => "date",
     "order" => "DESC",
     "categories" => array(),
@@ -70,7 +70,28 @@ $args = array(
 
 $query_args["paged"] = (get_query_var("paged")) ? get_query_var("paged") : 1;
 
-$query["s"] = $_GET["query"]["s"] ?? "";
+$query_args["s"] = $_GET["query"]["s"] ?? "";
+
+$query_args["date_query"] = array(
+    "after" => $_GET["query"]["startdate"] ?? "",
+    "before" => $_GET["query"]["enddate"] ?? "",
+    "inclusive" => true
+);
+
+if (isset($_GET["query"]["post_tags"])) {
+    $query_args["tax_query"][] = array(
+        'taxonomy' => 'post_tag',
+        'field' => "term_id",
+        'terms' => explode(",",$_GET["query"]["post_tags"]),
+        "operator" => "IN"
+    );
+}
+
+
+// echo "<pre class='text-xs'>";
+// print_r($query_args);
+// echo "</pre>";
+
 
 $the_query = new WP_Query( $query_args );
 if (isset($block)) {
@@ -81,12 +102,12 @@ if (isset($block)) {
 ?>
 
 <div class="pnm-article-list-container pnm-container alignwide<?= (isset($block["className"])) ? " " . $block["className"] : "" ?>">
+    <?= ((get_field("search_bar") && in_array(1, get_field("search_bar"))) || $args['search_bar'] == true) ? get_template_part( "template-parts/blocks/article-list/views/partials/search-bar") : ""; ?>
     <?php if (!$the_query->have_posts()) : ?>
         <div class="pnm-article-list-empty">
             <h2 class="text-center"><?= esc_html__( "Keine Artikel gefunden", "pnm" ) ?></h2>
         </div>
     <?php endif ?>
-    <?= ((get_field("search_bar") && in_array(1, get_field("search_bar"))) || $args['search_bar'] == true) ? get_template_part( "template-parts/blocks/article-list/views/partials/search-bar") : ""; ?>
     <div class="pnm-article-list-content pt-8 md:pt-12" id="<?= $list_id ?>">
         <?= get_template_part( "template-parts/blocks/article-list/views/{$args["view"]}", "", array(
             "query" => $the_query

@@ -6,6 +6,10 @@
     --gap: 1rem;
     --col-width: calc(100% / var(--cols) - var(--gap) * (var(--cols) - 1) / var(--cols));
 
+    @media (max-width: 767px) {
+        --cols: 1;
+    }
+
     --accentcolor: theme("colors.pnm-accent.DEFAULT");
     --bgcolor: theme("colors.pnm-accent.10");
     --bgFocuscolor: theme("colors.pnm-accent.20");

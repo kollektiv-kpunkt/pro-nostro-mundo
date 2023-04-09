@@ -67,7 +67,7 @@
                 "id": ""
             },
             "role": "",
-            "return_format": "array",
+            "return_format": "id",
             "multiple": 1,
             "allow_null": 0
         },
@@ -248,5 +248,5 @@
     "active": true,
     "description": "Please select the parameters for which posts you want to display and how you want them to be displayed.",
     "show_in_rest": 0,
-    "modified": 1680962194
+    "modified": 1681041805
 }

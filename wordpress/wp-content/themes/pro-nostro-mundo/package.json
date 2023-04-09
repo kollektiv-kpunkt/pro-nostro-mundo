@@ -34,6 +34,7 @@
     },
     "homepage": "https://github.com/kollektiv-kpunkt/pro-nostro-mundo#readme",
     "dependencies": {
+        "@easepick/core": "^1.2.1",
         "choices.js": "^10.2.0"
     }
 }
