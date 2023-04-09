@@ -1,0 +1,23 @@
+body.page #body-content {
+    >*+* {
+        margin-top: 3rem;
+    }
+
+    .pnm-page-title,
+    .pnm-subnav-container,
+    .pnm-social-share-outer,
+    .pnm-social-share-outer+*,
+    .wp-block-spacer {
+        margin-top: 0 !important;
+    }
+
+    blockquote.wp-block-quote {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+
+        &+p {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}

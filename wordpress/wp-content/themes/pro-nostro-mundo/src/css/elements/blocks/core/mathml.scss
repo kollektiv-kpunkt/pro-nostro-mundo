@@ -5,5 +5,12 @@
         display: none;
     }
 
-    @apply my-6;
+    p+& {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    &+p {
+        margin-top: 0 !important;
+    }
 }

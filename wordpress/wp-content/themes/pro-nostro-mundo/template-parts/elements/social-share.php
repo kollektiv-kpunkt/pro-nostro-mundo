@@ -4,7 +4,7 @@ $args = wp_parse_args($args, array(
     "single" => false
 ));
 ?>
-<div class="<?= $args["position"] ?> w-fit !p-0 !mx-0 mb-10">
+<div class="pnm-social-share-outer <?= $args["position"] ?> w-fit !p-0 !mx-0 mb-10">
     <div class="pnm-social-share-container <?= ($args["single"]) ? " single" : "" ?>">
         <div class="pnm-social-share-inner w-80 xl:w-20 flex gap-1 flex-wrap">
             <div class="pnm-social-share-link" data-type="copylink"><i class="icofont-link"></i></div>
