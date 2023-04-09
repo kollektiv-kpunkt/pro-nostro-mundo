@@ -1,3 +1,9 @@
 .wp-block-mathml-mathmlblock {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     @apply my-6;
 }
