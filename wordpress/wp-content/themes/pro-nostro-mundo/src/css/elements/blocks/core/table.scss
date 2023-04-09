@@ -1,0 +1,21 @@
+.pnm-datatable-wrapper {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    table {
+
+        th,
+        td {
+            white-space: nowrap;
+        }
+
+    }
+
+    div.dt-buttons {
+        float: unset !important;
+        margin-bottom: 1rem;
+    }
+}

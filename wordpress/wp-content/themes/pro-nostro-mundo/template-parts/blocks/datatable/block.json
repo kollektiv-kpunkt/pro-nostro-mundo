@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "pnm/datatable",
+    "title": "Filterable Datatable",
+    "description": "Display a filterable datatable with sorting and pagination",
+    "category": "layout",
+    "icon": "editor-table",
+    "keywords": [
+        "table",
+        "datatable",
+        "filter",
+        "filterable",
+        "sort",
+        "sortable",
+        "pagination",
+        "page",
+        "pnm"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "layout.php"
+    },
+    "align": "full"
+}
