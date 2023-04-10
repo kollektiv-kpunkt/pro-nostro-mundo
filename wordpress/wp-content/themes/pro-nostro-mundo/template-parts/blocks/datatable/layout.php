@@ -16,7 +16,7 @@ foreach ( $csv as $row ) {
 }
 ?>
 
-<div class="pnm-datatable-wrapper align<?= $block["align"] ?>">
+<div class="pnm-datatable-wrapper align<?= $block["align"] ?> hidden">
     <table class="pnm-datatable">
         <thead>
             <tr>
@@ -49,6 +49,9 @@ foreach ( $csv as $row ) {
             "<<i><p>>",
         buttons: [
             'csv', 'excel'
-        ]
+        ],
+        "initComplete": function(settings, json) {
+            jQuery(".pnm-datatable-wrapper").removeClass("hidden");
+        },
     });
 </script>
