@@ -10,3 +10,7 @@ import "./elements/subnav.js";
 import "./elements/article-pagination.js";
 import "./elements/article-cards.js";
 import "./elements/article-searchbar.js";
+
+import "./elements/social-share.js";
+
+import "./elements/show-more.js";

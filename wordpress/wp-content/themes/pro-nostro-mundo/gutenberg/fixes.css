@@ -45,3 +45,9 @@ html :where(.editor-styles-wrapper) h6 {
     margin-top: 0;
     line-height: 1 !important;
 }
+
+.pnm-showmore-block .pnm-showmore-content {
+    max-height: unset !important;
+    border: 1px solid #e5e5e5;
+    background-color: rgb(253, 253, 253);
+}

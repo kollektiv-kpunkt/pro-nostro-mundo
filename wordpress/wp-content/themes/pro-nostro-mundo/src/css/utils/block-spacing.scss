@@ -21,3 +21,27 @@ body.page #body-content {
         }
     }
 }
+
+body.single #post-content {
+    >*+* {
+        margin-top: 3rem;
+    }
+
+    blockquote.wp-block-quote {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+
+        &+p {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    p+ul {
+        margin-top: 1rem !important;
+    }
+
+    :first-child {
+        margin-top: 0 !important;
+    }
+}

@@ -133,6 +133,7 @@ $containersizes in $templates {
 }
 
 .alignfull .alignwide,
+.alignwide .alignwide,
 .alignfull .alignfull {
     --container-padding: 0px !important;
 }

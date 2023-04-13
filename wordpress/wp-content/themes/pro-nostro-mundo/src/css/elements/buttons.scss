@@ -23,7 +23,11 @@
     color: var(--text-color);
     transition: background-color 0.15s ease-in-out,
     color 0.15s ease-in-out;
-    @apply px-10 py-4 inline-block font-bold text-white leading-none;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @apply inline-block font-bold text-white leading-none;
 
     &:hover {
         background-color: var(--hover-bg-color);

@@ -1,0 +1,23 @@
+{
+    "name": "pnm/show-more",
+    "title": "Show More",
+    "description": "Button that allows people to show more content",
+    "category": "layout",
+    "icon": "editor-insertmore",
+    "keywords": [
+        "show more",
+        "button",
+        "more",
+        "show",
+        "pnm"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "layout.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    },
+    "align": "full"
+}
