@@ -10,7 +10,8 @@ if (document.querySelector(".pnm-showmore-block")) {
                 content.animate(
                     [
                         { maxHeight: "0px", opacity: 0 },
-                        { maxHeight: content.scrollHeight + "px", opacity: 1 },
+                        { maxHeight: content.scrollHeight + "px", opacity: 1, offset: 0.99 },
+                        { maxHeight: "10000000px", opacity: 1, offset: 1 }
                     ],
                     {
                         duration: 300,
