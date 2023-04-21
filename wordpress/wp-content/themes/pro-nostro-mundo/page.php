@@ -1,5 +1,5 @@
 <?php
-if (!$post->post_parent) {
+if ((!$post->post_parent) && !$post->post_content) {
     $childpage = get_pages(array(
         'child_of' => $post->ID,
         'sort_column' => 'menu_order',

@@ -50,13 +50,14 @@ function the_breadcrumbs( $args = array() ){
     $i = 0;
     foreach( $menu_item_objects as $menu_item ){
         $page_id = $menu_item->object_id;
+        $post = get_post($page_id);
         $title = (get_field("breadcrumb_title", $page_id)) ? get_field("breadcrumb_title", $page_id) : $menu_item->title;
         if ($i == count($menu_item_objects) - 1) {
             $link = '<span>%s</span>';
             $crumbs[] = sprintf( $link, $title );
             continue;
         }
-        if (( '#' == $menu_item->url ) || (!$menu_item->menu_item_parent)) {
+        if (( '#' == $menu_item->url ) || ((!$menu_item->menu_item_parent) && $post->post_content == "")) {
             $link = '<span>%s</span>';
             $crumbs[] = sprintf( $link, $title );
         } else {
