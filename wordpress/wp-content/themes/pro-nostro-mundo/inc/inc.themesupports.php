@@ -74,7 +74,7 @@ function pnm_theme_support() {
     $textdomain = load_theme_textdomain( 'pnm', get_template_directory() . '/languages' );
     if (!$textdomain) {
         add_action( 'admin_notices', function() {
-            echo '<div class="error"><p>' . __( 'Error loading textdomain for theme "pro-nostro-mundo"', 'pro-nostro-mundo' ) . '</p></div>';
+            echo '<div class="error"><p>' . __( 'Error loading textdomain for theme "pnm"', 'pnm' ) . '</p></div>';
         });
     }
 }
@@ -95,3 +95,6 @@ function get_nav_menu_items_by_location( $location, $args = [] ) {
     // Return menu post objects
     return $menu_items;
 }
+
+
+include_once(__DIR__ ."/inc.polylang_nav_menu.php");

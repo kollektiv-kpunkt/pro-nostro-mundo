@@ -15,7 +15,7 @@ $args = wp_parse_args($args, array(
             </a>
             <div class="pnm-navbar-main-menu flex gap-x-6 mt-auto">
                 <?php
-                wp_nav_menu( array(
+                polylang_nav_menu( array(
                     'theme_location' => 'primary_menu',
                     'container' => false,
                     'items_wrap' => '%3$s',
@@ -71,7 +71,7 @@ $args = wp_parse_args($args, array(
         <div class="pnm-mobile-navmenu-wrapper md:hidden bg-pnm-accent-10">
             <div class="pnm-mobile-navmenu-container pnm-container alignwide pb-4 pt-3 text-pnm-accent">
                 <?php
-                wp_nav_menu( array(
+                polylang_nav_menu( array(
                     'theme_location' => 'primary_menu',
                     "menu_class" => "pnm-mobile-navmenu",
                     'container' => false,
