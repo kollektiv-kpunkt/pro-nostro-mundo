@@ -1,4 +1,12 @@
 <?php
+if (!$post->post_parent) {
+    $childpage = get_pages(array(
+        'child_of' => $post->ID,
+        'sort_column' => 'menu_order',
+        'sort_order' => 'asc'
+    ));
+    header("Location: " . get_permalink($childpage[0]->ID));
+}
 get_header();
 ?>
 

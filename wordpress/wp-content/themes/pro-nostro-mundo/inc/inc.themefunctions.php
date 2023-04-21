@@ -56,7 +56,7 @@ function the_breadcrumbs( $args = array() ){
             $crumbs[] = sprintf( $link, $title );
             continue;
         }
-        if ( '#' == $menu_item->url ) {
+        if (( '#' == $menu_item->url ) || (!$menu_item->menu_item_parent)) {
             $link = '<span>%s</span>';
             $crumbs[] = sprintf( $link, $title );
         } else {
