@@ -121,7 +121,8 @@ h6 {
         text-decoration: underline;
 
         &.pnm-button,
-        &.wp-block-button__link {
+        &.wp-block-button__link,
+        &.gb-button {
             text-decoration: none;
         }
     }
