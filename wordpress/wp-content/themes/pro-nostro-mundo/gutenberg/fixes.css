@@ -51,3 +51,7 @@ html :where(.editor-styles-wrapper) h6 {
     border: 1px solid #e5e5e5;
     background-color: rgb(253, 253, 253);
 }
+
+blockquote {
+    margin-bottom: 4rem !important;
+}
