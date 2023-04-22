@@ -83,27 +83,31 @@ function pnm_theme_support() {
         });
     }
 
-    function replace_anchor_mailto_tags_with_js($content) {
-        $links = array();
-        preg_match_all('/<a([^>]+)href="mailto:([^>]+)"([^>]*)>/i', $content, $links);
-        if (isset($links)) {
-            foreach ($links as $link) {
-                $base64 = base64_encode($link[2]);
-                $script = <<<EOD
-                javascript:window.open(`mailto:`.concat(atob({$base64})));
-                EOD;
-                $old_content = <<<EOD
-                <a{$link[1]}href="mailto:{$link[2]}"{$link[3]}>
-                EOD;
-                $new_content = <<<EOD
-                <a{$link[1]}href="{$script}"{$link[3]}>
-                EOD;
-                $content = str_replace($old_content, $new_content, $content);
-            }
-        }
-        return $content;
-    }
-    add_filter("the_content", "replace_anchor_mailto_tags_with_js");
+
+    // TODO: This function should replace the mailto: links with javascript:window.open(`mailto:`.concat(atob({$base64}))); automatically but it doesn't work yet.
+    // function replace_anchor_mailto_tags_with_js($content) {
+    //     $links = array();
+    //     preg_match('/<a([^>]+)href="mailto:([^>]+)"([^>]*)>/i', $content, $links);
+    //     if (isset($links[2])) {
+    //         $i = 0;
+    //         foreach ($links as $link) {
+    //             echo("<pre>");
+    //             print_r($link);
+    //             echo("</pre>");
+    //             // preg_match('/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/', $link, $email);
+    //             // $email = $email[0];
+    //             // $base64 = base64_encode($email);
+    //             // $script = <<<EOD
+    //             // javascript:window.open(`mailto:`.concat(atob({$base64})));
+    //             // EOD;
+    //             // $replacement = str_replace($link, $script, $original_markup);
+    //             // $content = str_replace($original_markup, $replacement, $content);
+    //             // $i++;
+    //         }
+    //     }
+    //     return $content;
+    // }
+    // add_filter("the_content", "replace_anchor_mailto_tags_with_js");
 }
 
 add_action( 'after_setup_theme', 'pnm_theme_support' );
