@@ -90,10 +90,10 @@ function pnm_theme_support() {
             foreach ($links[2] as $link) {
                 $base64 = base64_encode($link);
                 $script = <<<EOD
-                javascript:window.open(`mailto:`.concat(atob(`{$base64}`)));
+                javascript:window.open(`mailto:`.concat(atob({$base64})));
                 EOD;
-                $content = str_replace("href='mailto:{$link}", "href='{$script}'", $content);
-                $content = str_replace('href="mailto:' . $link, 'href="' . $script . '"', $content);
+                $content = str_replace("href='mailto:{$link}'", "href='{$script}'", $content);
+                $content = str_replace('href="mailto:' . $link . '"', 'href="' . $script . '"', $content);
             }
         }
         return $content;
