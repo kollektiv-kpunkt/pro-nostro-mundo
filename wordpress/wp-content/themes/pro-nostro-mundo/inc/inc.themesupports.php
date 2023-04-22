@@ -50,18 +50,23 @@ function pnm_theme_support() {
         ),
         array(
             'name' => __('Medium', 'pnm'),
-            'size' => "1.3rem",
+            'size' => "1.15rem",
             'slug' => 'medium'
         ),
         array(
             'name' => __('Large', 'pnm'),
-            'size' => "2.25rem",
-            'slug' => 'large'
+            'size' => "1.3rem",
+            'slug' => 'medium'
         ),
         array(
-            'name' => __('x-Large', 'pnm'),
-            'size' => "3rem",
+            'name' => __('X-Large', 'pnm'),
+            'size' => "2.25rem",
             'slug' => 'x-large'
+        ),
+        array(
+            'name' => __('2x-Large', 'pnm'),
+            'size' => "3rem",
+            'slug' => '2x-large'
         )
     ));
 
