@@ -1,0 +1,4 @@
+#!/bin/bash
+mysqldump -u k_pn72_backup -pNautilus14! k_pn72_dev >> "/data/sites/k./mysqldumps/dump-$(date +"%Y_%m_%d_%I_%M_%p").sql"
+find /data/sites/k./mysqldumps/ -name "*.sql" -type f -mtime +2 -delete 
+
