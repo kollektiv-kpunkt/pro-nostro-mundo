@@ -56,7 +56,7 @@ function pnm_theme_support() {
         array(
             'name' => __('Large', 'pnm'),
             'size' => "1.3rem",
-            'slug' => 'medium'
+            'slug' => 'large'
         ),
         array(
             'name' => __('X-Large', 'pnm'),
@@ -83,31 +83,6 @@ function pnm_theme_support() {
         });
     }
 
-
-    // TODO: This function should replace the mailto: links with javascript:window.open(`mailto:`.concat(atob({$base64}))); automatically but it doesn't work yet.
-    // function replace_anchor_mailto_tags_with_js($content) {
-    //     $links = array();
-    //     preg_match('/<a([^>]+)href="mailto:([^>]+)"([^>]*)>/i', $content, $links);
-    //     if (isset($links[2])) {
-    //         $i = 0;
-    //         foreach ($links as $link) {
-    //             echo("<pre>");
-    //             print_r($link);
-    //             echo("</pre>");
-    //             // preg_match('/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/', $link, $email);
-    //             // $email = $email[0];
-    //             // $base64 = base64_encode($email);
-    //             // $script = <<<EOD
-    //             // javascript:window.open(`mailto:`.concat(atob({$base64})));
-    //             // EOD;
-    //             // $replacement = str_replace($link, $script, $original_markup);
-    //             // $content = str_replace($original_markup, $replacement, $content);
-    //             // $i++;
-    //         }
-    //     }
-    //     return $content;
-    // }
-    // add_filter("the_content", "replace_anchor_mailto_tags_with_js");
 }
 
 add_action( 'after_setup_theme', 'pnm_theme_support' );
