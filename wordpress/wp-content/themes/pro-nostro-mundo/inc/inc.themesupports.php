@@ -82,6 +82,23 @@ function pnm_theme_support() {
             echo '<div class="error"><p>' . __( 'Error loading textdomain for theme "pnm"', 'pnm' ) . '</p></div>';
         });
     }
+
+    function replace_anchor_mailto_tags_with_js($content) {
+        $links = array();
+        preg_match_all('/<a([^>]+)href="mailto:([^>]+)"([^>]*)>/i', $content, $links);
+        if (isset($links[2])) {
+            foreach ($links[2] as $link) {
+                $base64 = base64_encode($link);
+                $script = <<<EOD
+                javascript:window.open(`mailto:`.concat(atob(`{$base64}`)));
+                EOD;
+                $content = str_replace("href='mailto:{$link}", "href='{$script}'", $content);
+                $content = str_replace('href="mailto:' . $link, 'href="' . $script . '"', $content);
+            }
+        }
+        return $content;
+    }
+    add_filter("the_content", "replace_anchor_mailto_tags_with_js");
 }
 
 add_action( 'after_setup_theme', 'pnm_theme_support' );
