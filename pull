@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo chown timothyoesch . -R
+git pull
+cd wordpress/wp-content/themes/pro-nostro-mundo/ 
+npm run build
+cd ../../../../
+pwd
+sudo chown www-data . -R

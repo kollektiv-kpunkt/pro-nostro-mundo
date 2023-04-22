@@ -1,0 +1,7 @@
+sudo chown timothyoesch . -R
+
+git add -A
+git commit -a
+git push
+
+sudo chown www-data . -R
