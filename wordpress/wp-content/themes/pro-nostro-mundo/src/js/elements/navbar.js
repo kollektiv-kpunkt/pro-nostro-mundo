@@ -72,6 +72,7 @@ if (document.querySelector(".pnm-navbar-main-menu .menu-item.menu-item-has-child
                             fill: "forwards"
                         }
                     );
+                    window.location.href = item.querySelector("a").href;
                 }, submenuItems.length * 100);
             }
         });

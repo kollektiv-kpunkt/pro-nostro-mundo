@@ -42,6 +42,9 @@ if (document.querySelector(".pnm-fries-menu")) {
             if (submenu.classList.contains("open")) {
                 closeSubmenu(menuWrapper, submenu);
                 submenu.classList.remove("open");
+                setTimeout(() => {
+                    window.location.href = item.querySelector("a").href;
+                }, 300);
             } else {
                 openSubmenu(menuWrapper, submenu);
                 submenu.classList.add("open");
