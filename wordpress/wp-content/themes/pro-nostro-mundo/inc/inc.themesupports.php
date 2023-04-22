@@ -86,14 +86,19 @@ function pnm_theme_support() {
     function replace_anchor_mailto_tags_with_js($content) {
         $links = array();
         preg_match_all('/<a([^>]+)href="mailto:([^>]+)"([^>]*)>/i', $content, $links);
-        if (isset($links[2])) {
-            foreach ($links[2] as $link) {
-                $base64 = base64_encode($link);
+        if (isset($links)) {
+            foreach ($links as $link) {
+                $base64 = base64_encode($link[2]);
                 $script = <<<EOD
                 javascript:window.open(`mailto:`.concat(atob({$base64})));
                 EOD;
-                $content = str_replace("href='mailto:{$link}'", "href='{$script}'", $content);
-                $content = str_replace('href="mailto:' . $link . '"', 'href="' . $script . '"', $content);
+                $old_content = <<<EOD
+                <a{$link[1]}href="mailto:{$link[2]}"{$link[3]}>
+                EOD;
+                $new_content = <<<EOD
+                <a{$link[1]}href="{$script}"{$link[3]}>
+                EOD;
+                $content = str_replace($old_content, $new_content, $content);
             }
         }
         return $content;
