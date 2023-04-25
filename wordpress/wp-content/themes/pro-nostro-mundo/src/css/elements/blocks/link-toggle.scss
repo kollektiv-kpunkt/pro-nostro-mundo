@@ -9,28 +9,32 @@
         border-top: 2px solid #000000;
         border-bottom: 2px solid #000000;
 
-        .pnm-link-toggle-content a p {
-            max-width: 80%;
-        }
+        .pnm-link-toggle-content a {
+            text-decoration: none !important;
 
-        &.text-white {
-            .pnm-block-content {
-                border-color: #ffffff;
-            }
-        }
-
-        i {
-            transition: 0.125s ease-in-out transform;
-        }
-
-        &:hover i {
-
-            &.icofont-download {
-                transform: scale(1.1);
+            p {
+                max-width: 80%;
             }
 
-            &.icofont-rounded-right {
-                transform: translateX(0.5rem);
+            &.text-white {
+                .pnm-block-content {
+                    border-color: #ffffff;
+                }
+            }
+
+            i {
+                transition: 0.125s ease-in-out transform;
+            }
+
+            &:hover i {
+
+                &.icofont-download {
+                    transform: scale(1.1);
+                }
+
+                &.icofont-rounded-right {
+                    transform: translateX(0.5rem);
+                }
             }
         }
     }
