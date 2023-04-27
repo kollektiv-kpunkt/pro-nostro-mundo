@@ -1,3 +1,8 @@
+<?php
+if (pll_current_language() == "fr") {
+    wp_redirect("https://www.notre-bns.ch/");
+}
+?>
 <?php get_header();?>
 
 <div id="body-content" class="pt-24 md:pt-28">
