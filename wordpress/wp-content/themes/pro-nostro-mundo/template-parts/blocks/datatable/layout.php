@@ -50,6 +50,12 @@ foreach ( $csv as $row ) {
         buttons: [
             'csv', 'excel'
         ],
+        columns: [
+            { mData: 'Company' } ,
+            { mData: 'Value ($M)', render: $.fn.dataTable.render.number( ',', '.', 3, '$' ) },
+            { mData: 'HG' },
+            { mData: 'reported.estimated' }
+        ],
         "initComplete": function(settings, json) {
             jQuery(".pnm-datatable-wrapper").removeClass("hidden");
         },
