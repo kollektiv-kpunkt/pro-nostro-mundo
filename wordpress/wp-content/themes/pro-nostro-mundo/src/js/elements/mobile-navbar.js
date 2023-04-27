@@ -30,8 +30,6 @@ if (document.querySelector(".pnm-fries-menu")) {
             let item = e.target.closest(".menu-item");
             e.preventDefault();
             if (item.classList.contains("menu-item-has-children")) {
-                console.log("has children");
-                console.log(item);
                 e.preventDefault();
             }
             let submenu = item.querySelector(".sub-menu");
@@ -42,9 +40,6 @@ if (document.querySelector(".pnm-fries-menu")) {
             if (submenu.classList.contains("open")) {
                 closeSubmenu(menuWrapper, submenu);
                 submenu.classList.remove("open");
-                setTimeout(() => {
-                    window.location.href = item.querySelector("a").href;
-                }, 300);
             } else {
                 openSubmenu(menuWrapper, submenu);
                 submenu.classList.add("open");
