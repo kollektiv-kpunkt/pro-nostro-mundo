@@ -140,6 +140,18 @@ h6 {
         }
     }
 
+    ol {
+        list-style: decimal;
+        margin-left: 1.5em;
+        padding-left: calc(var(--container-padding) * 2) !important;
+        @apply my-4;
+
+        &.wp-block-social-links {
+            margin-left: 0;
+            padding-left: 0 !important;
+        }
+    }
+
     p+p {
         margin-top: 1em !important;
     }
