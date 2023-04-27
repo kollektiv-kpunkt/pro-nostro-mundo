@@ -1,7 +1,7 @@
 blockquote.wp-block-quote {
 
     p {
-        @apply py-4 pl-6 border-l-4 border-opacity-75 border-l-pnm-accent text-pnm-accent italic bg-pnm-accent-slight;
+        @apply py-4 pl-6 pr-6 border-l-4 border-opacity-75 border-l-pnm-accent text-pnm-accent italic bg-pnm-accent-slight;
     }
 
     cite {
