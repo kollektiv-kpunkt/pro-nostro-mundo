@@ -11,12 +11,6 @@ if (document.querySelector(".pnm-navbar-main-menu .menu-item.menu-item-has-child
                 submenu = item.parentElement.closest(".menu-item").click();
                 return;
             }
-            if (document.querySelector(".menu-item.active")) {
-                let activeItem = document.querySelector(".menu-item.active");
-                if (activeItem !== item) {
-                    document.querySelector(".menu-item.active").click();
-                }
-            }
             item.classList.toggle("active");
             let submenuItems = submenu.querySelectorAll(".menu-item");
             if (item.classList.contains("active")) {
